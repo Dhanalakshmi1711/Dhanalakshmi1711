@@ -1,21 +1,14 @@
 pipeline {
     agent any
-    stages('Setup Environment') {
-            steps {
-                script {
-                    // Set up virtual environment
-                    sh '''
-                        python3 -m venv venv
-                        source venv/bin/activate
-                        pip install flask
-                    '''
-                }
-            }
-        }
     stages {
         stage('running flask') {
             steps {
                 echo("::::::::::::::::::::::::")
+                sh '''
+                        python3 -m venv venv
+                        source venv/bin/activate
+                        pip install flask
+                    '''
                 sh("python3 app.py")
                 
             }
