@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    stage('Setup Environment') {
+    stages('Setup Environment') {
             steps {
                 script {
                     // Set up virtual environment
