@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     // Set up virtual environment
-                    sh 'sudo apt install python3-flask -y'
+                    sh 'python3 app.py'
                 }
             }
         }
