@@ -5,7 +5,7 @@ pipeline {
         stage('Hello') {
             steps {
                 echo("::::::::::::::::::::::::")
-                sh("pip")
+                sh("pip install flask")
                 sh("python3 app.py")
                 
             }
