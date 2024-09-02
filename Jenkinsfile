@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     // Set up virtual environment
-                    sh 'python3 app.py'
+                    sh 'python3 test.py'
                 }
             }
         }
